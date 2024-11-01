@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Thông tin chi tiết sách</h2>
+<div>
+    <div>
+        <img src="~/Hinhsanpham/@Model.Anhbia" with="100%"/>
+    </div>
+    <div>
+        <h4>Tên sách: @Model.Tensach</h4>
+        <p>Mô tả: @Model.Mota</p>
+        <p>Giá: @Model.Giaban VNĐ</p>
+    </div>
+    <div>
+        <a href="@Url.Action("Add to cart","ShoppingCard", new {id = @Model.Masach})">Đặt mua</a>
+    </div>
+</div>
+

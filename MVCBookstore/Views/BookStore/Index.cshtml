@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MVCBookstore.Models.SACH>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="center_content">
+    <div class="row flex-container">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var sach in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4 book-item">
+                    <div class="thumbnail">
+                        <a href="@Url.Action("Details", "Bookstore", new { id = sach.Masach })">
+                            <img alt="@sach.Tensach" src="~/Hinhsanpham/@sach.Anhbia" class="img-fluid" style="text-align:center" />
+                            <div class="caption">
+                                <h4 class="text-center">@sach.Tensach</h4>
+                                
+                            </div>
+                        </a>
+                        <div class="ratings">
+                            <p class="pull-right">15 reviews</p>
+                            <p>
+                                @for (int i = 0; i < 5; i++)
+                                {
+                                    <span class="glyphicon glyphicon-star"></span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Không có sản phẩm nào</p>
+        }
+    </div>
+</div>
+

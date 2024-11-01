@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Contents/css/style.css" />
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="iecss.css" />
+    <![endif]-->
+    <script type="text/javascript" src="~/Scripts/js/boxOver.js"></script>
+</head>
+<body>
+    <div id="main_container">
+        <div id="header">
+            <div class="top_right">
+                <div class="languages">
+                    <div class="lang_text">Languages:</div>
+                    <a href="http://all-free-download.com/free-website-templates/" class="lang"><img src="~/Contents/images/en.gif" alt="" border="0" /></a> <a href="http://all-free-download.com/free-website-templates/" class="lang"><img src="~/Contents/~/Contents/images/de.gif" alt="" border="0" /></a>
+                </div>
+                <div class="big_banner"> <a href="http://all-free-download.com/free-website-templates/"><img src="~/Contents/images/banner728.jpg" alt="" border="0" /></a> </div>
+            </div>
+            <div id="logo"> <a href="http://all-free-download.com/free-website-templates/"><img src="~/Contents/images/logo.png" alt="" border="0" width="182" height="85" /></a> </div>
+        </div>
+    </div>
+    <div id="main_content">
+        <div id="menu_tab">
+            <ul class="menu">
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav"> Home </a></li>
+                <li class="divider"></li>
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav">Products</a></li>
+                <li class="divider"></li>
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav">Specials</a></li>
+                <li class="divider"></li>
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav">My account</a></li>
+                <li class="divider"></li>
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav">Sign Up</a></li>
+                <li class="divider"></li>
+                <li><a href="http://all-free-download.com/free-website-templates/" class="nav">Shipping </a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html" class="nav">Contact Us</a></li>
+                <li class="divider"></li>
+                <li><a href="details.html" class="nav">Details</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="crumb_navigation"> Navigation: <span class="current">Home</span> </div>
+    <div class="left_content">
+        @Html.Action("Chude", "Bookstore")
+
+
+        <div class="title_box"></div>
+        @Html.Action("Nhaxuatban", "Bookstore")
+    </div>
+      
+
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="left_footer"> <img src="~/Contents/images/footer_logo.png" alt="" width="89" height="42" /> </div>
+        <div class="center_footer">
+            Template name. All Rights Reserved 2008<br />
+            <a href="http://csscreme.com"><img src="~/Contents/images/csscreme.jpg" alt="csscreme" title="csscreme" border="0" /></a><br />
+            <img src="~/Contents/images/payment.gif" alt="" />
+        </div>
+        <div class="right_footer"> <a href="http://all-free-download.com/free-website-templates/">home</a> <a href="http://all-free-download.com/free-website-templates/">about</a> <a href="http://all-free-download.com/free-website-templates/">sitemap</a> <a href="http://all-free-download.com/free-website-templates/">rss</a> <a href="http://all-free-download.com/free-website-templates/">contact us</a> </div>
+    </div>
+    </div>
+    <!-- end of main_container -->
+    <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+</body>
+</body>
+</html>

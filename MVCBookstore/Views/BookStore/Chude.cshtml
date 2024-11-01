@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCBookstore.Models.CHUDE>
+<p class="title_box">CHỦ ĐỀ SÁCH</p>
+<div class="left_menu">
+    @foreach (var item in Model)
+    {
+        <div>
+            <!-- Hoặc bạn có thể sử dụng <p> thay vì <div> -->
+            <a href="@Url.Action("SpTheochude", "Bookstore", new { id = item.MaCD })" class="menu_item">
+                @item.TenChuDe
+            </a>
+        </div>
+    }
+</div>
