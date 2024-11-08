@@ -528,4 +528,24 @@ padding:10px 0 0 60px;
     .menu_item:hover {
         background-color: #f0f0f0; /* Thay đổi màu nền khi hover */
     }
+#Datmua a {
+    clear: both;
+    background-color: red; /* Sửa lỗi 'backgroud-color' thành 'background-color' */
+    color: white;
+    width: 100px;
+    height: 35px;
+    display: block;
+/*    float:right;*/
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+  
+}
+
+    #Datmua a:hover {
+        background-color: gray;
+        color: red;
+    }
+
 

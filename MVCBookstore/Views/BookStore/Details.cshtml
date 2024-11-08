@@ -4,18 +4,23 @@
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<h2>Thông tin chi tiết sách</h2>
-<div>
-    <div>
-        <img src="~/Hinhsanpham/@Model.Anhbia" with="100%"/>
+<h2>THÔNG TIN CHI TIẾT SÁCH</h2>
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <!-- Cột hình ảnh sách -->
+    <div style="width: 40%; border-left: 1px dotted azure; padding-left: 10px;">
+        <img src="~/Hinhsanpham/@Model.Anhbia" width="80%" />
     </div>
-    <div>
-        <h4>Tên sách: @Model.Tensach</h4>
-        <p>Mô tả: @Model.Mota</p>
-        <p>Giá: @Model.Giaban VNĐ</p>
-    </div>
-    <div>
-        <a href="@Url.Action("Add to cart","ShoppingCard", new {id = @Model.Masach})">Đặt mua</a>
+
+    <!-- Cột thông tin sách -->
+    <div style="width: 60%; padding: 10px;">
+        <h4 style="font-weight: bold; color: red;">Tên sách: @Model.Tensach</h4>
+        <p style="text-align: justify;"><span style="font-weight: bold;">Mô tả:</span> @Model.Mota</p>
+        <p style="font-weight: bold;">Giá bán: <span style="color: red; font-size: 16px;">@Model.Giaban VNĐ</span></p>
+
+        <!-- Nút ĐẶT MUA -->
+        <div style="margin-top: 20px;" id="Datmua">
+            <a href="@Url.Action("ThemGioHang","GioHang", new {@iMasach = @Model.Masach, @strURL=Request.Url.ToString()})" class="list-group-item">ĐẶT MUA</a>
+        </div>
     </div>
 </div>
 

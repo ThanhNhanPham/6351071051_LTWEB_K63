@@ -132,6 +132,7 @@
     <Content Include="Hinhsanpham\dong-phuong.jpg" />
     <Content Include="Hinhsanpham\hanh-trinh-phuong-dong.jpg" />
     <Content Include="Hinhsanpham\lich-su.jpg" />
+    <Content Include="Hinhsanpham\shoppingcart.png" />
     <Content Include="Hinhsanpham\xua-ay.jpg" />
     <Content Include="Models\QLBanSach.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -149,6 +150,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BookStoreController.cs" />
+    <Compile Include="Controllers\GiohangController.cs" />
+    <Compile Include="Controllers\NguoidungController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +164,7 @@
     <Compile Include="Models\DONDATHANG.cs">
       <DependentUpon>QLBanSach.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Giohang.cs" />
     <Compile Include="Models\KHACHHANG.cs">
       <DependentUpon>QLBanSach.tt</DependentUpon>
     </Compile>
@@ -213,6 +217,12 @@
     <Content Include="Views\BookStore\SPTheochude.cshtml" />
     <Content Include="Views\BookStore\SPTheoNXB.cshtml" />
     <Content Include="Views\BookStore\Details.cshtml" />
+    <Content Include="Views\Nguoidung\DangKy.cshtml" />
+    <Content Include="Views\Nguoidung\DangNhap.cshtml" />
+    <Content Include="Views\Giohang\Giohang.cshtml" />
+    <Content Include="Views\Giohang\GiohangPartial.cshtml" />
+    <Content Include="Views\Giohang\DatHang.cshtml" />
+    <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
