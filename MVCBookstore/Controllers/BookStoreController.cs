@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCBookstore.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MVCBookstore.Controllers
 {
@@ -16,16 +18,28 @@ namespace MVCBookstore.Controllers
         {
             return data.SACHes.OrderByDescending(a => a.Ngaycapnhat).Take(count).ToList();
         }
-        public ActionResult Index()
-        {
-            var books = data.SACHes.ToList(); // Lấy danh sách sách từ cơ sở dữ liệu
-            if (books == null || books.Count == 0)
-            {
-                // Xử lý nếu không có dữ liệu
-                ViewBag.Message = "Không có dữ liệu sách để hiển thị.";
-            }
-            return View(books);
+        //public ActionResult Index()
+        //{
+        //    var books = data.SACHes.ToList(); // Lấy danh sách sách từ cơ sở dữ liệu
+        //    if (books == null || books.Count == 0)
+        //    {
+        //        // Xử lý nếu không có dữ liệu
+        //        ViewBag.Message = "Không có dữ liệu sách để hiển thị.";
+        //    }
+        //    return View(books);
            
+        //}
+        public ActionResult Index(int ? page)
+        {
+            //Tao bien quy dinh so san pham tren moi trang
+            int pageSize = 5;
+            //tao bien so trang
+            int pageNum = (page ?? 1);
+
+            //Lấy top 5 sản phẩm bán chạy nhất
+            var sachmoi = LaySachMoi(5);
+            return View(sachmoi.ToPagedList(pageNum, pageSize));
+
         }
         public ActionResult Chude()
         {

@@ -72,3 +72,9 @@ D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstor
 D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\obj\Debug\MVCBookstore.pdb
 D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\EntityFramework.dll
 D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\EntityFramework.xml
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\PagedList.dll
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\PagedList.Mvc.dll
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\PagedList.xml
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\PagedList.Mvc.xml
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\Newtonsoft.Json.dll
+D:\HỌC KỲ 1 2024-2025\Lập trình Web\Thực hành\MVCBookstore\MVCBookstore\bin\Newtonsoft.Json.xml

@@ -19,17 +19,17 @@ namespace MVCBookstore.Models
             this.CHITIETDONTHANGs = new HashSet<CHITIETDONTHANG>();
             this.VIETSACHes = new HashSet<VIETSACH>();
         }
-
+    
         public int Masach { get; set; }
-        public string Tensach { get; set; } =  string.Empty;
-        public decimal? Giaban { get; set; }
-        public string Mota { get; set; } = string.Empty;
-        public string Anhbia { get; set; } = string.Empty;
-        public DateTime? Ngaycapnhat { get; set; }
-        public int? Soluongton { get; set; }
-        public int? MaCD { get; set; }
-        public int? MaNXB { get; set; }
-
+        public string Tensach { get; set; }
+        public Nullable<decimal> Giaban { get; set; }
+        public string Mota { get; set; }
+        public string Anhbia { get; set; }
+        public Nullable<System.DateTime> Ngaycapnhat { get; set; }
+        public Nullable<int> Soluongton { get; set; }
+        public Nullable<int> MaCD { get; set; }
+        public Nullable<int> MaNXB { get; set; }
+    
         public virtual ICollection<CHITIETDONTHANG> CHITIETDONTHANGs { get; set; }
         public virtual CHUDE CHUDE { get; set; }
         public virtual NHAXUATBAN NHAXUATBAN { get; set; }

@@ -1,8 +1,12 @@
-﻿@model IEnumerable<MVCBookstore.Models.SACH>
+﻿
+@using MVCBookstore.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<SACH>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
+<h3>SÁCH MỚI</h3>
 
 <div class="center_content">
     <div class="row flex-container">
@@ -16,7 +20,7 @@
                             <img alt="@sach.Tensach" src="~/Hinhsanpham/@sach.Anhbia" class="img-fluid" style="text-align:center" />
                             <div class="caption">
                                 <h4 class="text-center">@sach.Tensach</h4>
-                                
+
                             </div>
                         </a>
                         <div class="ratings">
@@ -37,5 +41,14 @@
             <p>Không có sản phẩm nào</p>
         }
     </div>
+    Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+    <div class="menuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
 </div>
 
+<style>
+    .menuTrang li {
+        display: inline;
+    }
+</style>

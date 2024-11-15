@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Thongkesach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+    const chartLabels = JSON.parse('@Html.Raw(ViewBag.ChartLabels)');
+    const chartValues = JSON.parse('@Html.Raw(ViewBag.ChartValues)');
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: chartLabels,
+            datasets: [{
+                label: 'Số lượng sách',
+                data: chartValues,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Thống kê dữ liệu'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true  // Đảm bảo trục Y bắt đầu từ 0
+                    }
+                }]
+            }
+        }
+    });
+</script>
